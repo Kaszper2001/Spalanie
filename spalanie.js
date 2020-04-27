@@ -7,9 +7,11 @@ let liczenie = {
  obliczspalanie: document.querySelector(".obliczspalanie"),
  spalanie: document.querySelector(".spalanie"),
  spalone: document.querySelector(".spalone"),
+ spalanie2: document.querySelector(".spalanie2"),
  oblicz: document.querySelector(".oblicz"),
  cena: document.querySelector(".cena"),
  wynik: document.querySelector(".wynik"),
+ speed: document.querySelector(".speed"),
 
 
 init: function(){
@@ -28,9 +30,13 @@ init: function(){
         else {
             this.spalanie.innerText = (this.paliwo.value/this.km.value) * 100;
             this.spalanie.innerText = Math.round (this.spalanie.innerText * 10) / 10;
-            this.spalone.innerText = this.spalanie.innerText * (this.km.value * 0.01);
-            this.spalone.innerText = Math.round (this.spalone.innerText * 10) / 10;
+            this.spalone.innerText = this.paliwo.value //* (this.km.value * 0.01);
+            //this.spalone.innerText = Math.round (this.spalone.innerText * 10) / 10;
         }
+       
+        this.spalanie2.innerText = this.spalanie.innerText
+
+        this.speed.innerText = this.km.value
     }.bind(this))
 
     
